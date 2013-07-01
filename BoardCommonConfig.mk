@@ -31,6 +31,7 @@ ARCH_ARM_HAVE_NEON := true
 ARCH_ARM_HAVE_TLS_REGISTER := true
 TARGET_GLOBAL_CFLAGS += -mtune=cortex-a9 -mfpu=neon -mfloat-abi=softfp
 TARGET_GLOBAL_CPPFLAGS += -mtune=cortex-a9 -mfpu=neon -mfloat-abi=softfp
+TARGET_GCC_VERSION := 4.6
 
 EXYNOS4X12_ENHANCEMENTS := true
 EXYNOS4_ENHANCEMENTS := true
@@ -58,6 +59,7 @@ TARGET_SPECIFIC_HEADER_PATH := device/samsung/smdk4412-common/overlay/include
 BOARD_KERNEL_CMDLINE := "console=ttySAC2,115200"
 BOARD_KERNEL_BASE := 0x40000000
 BOARD_KERNEL_PAGESIZE := 2048
+TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.6/bin/arm-eabi-
 
 # Filesystem
 BOARD_NAND_PAGE_SIZE := 4096
